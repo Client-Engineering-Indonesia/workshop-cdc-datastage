@@ -20,11 +20,15 @@ I was assigned to setup replication between our banking and insurance database. 
 ---
 
 1. **Open the “Start Menu” then click on the “IIDR Start” icon.**
- 
+ ![image](https://github.com/user-attachments/assets/125e230b-ef38-4f6d-b518-9dd46409aea2)
+
 2. Open the “Start Menu” then click on the “Management Console” icon. 
   Authenticate with our IIDR Administrator ‘iidradm‘ and password ‘inf0server’ and click: “Login”. Leave the values for server name (empty) and port number (10101) unchanged.
+ ![image](https://github.com/user-attachments/assets/f12816d4-3424-4e26-8248-8565eee13c49)
+
 
 3. If not already selected click the “Configuration” button on the top.
+ ![image](https://github.com/user-attachments/assets/d0632b36-c5e5-497c-a07c-7244fdc53188)
 
 4. I can see three subscriptions; “IDR2DB”, “IDR2DC”, and “IDR2FILE” which are defined under project “Default Project”. Let’s first take a look at subscription “IDR2DB” which is used for the address and bank balance synchronization part. Click on “IDR2DB” in the left hand side of the window.
 
