@@ -1,4 +1,4 @@
-### IBM InfoSphere Data Replication
+<img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/54e51784-4c68-4862-9101-7761dad4975a" />### IBM InfoSphere Data Replication
 
 In this lab, you will be using IBM InfoSphere Data Replication to replicate data between the JK Life & Wealth’s banking and insurance databases. Also, we will be using InfoSphere Data Replication in connection with InfoSphere DataStage to keep a history of our bank balances to see how our business develops in different areas of the country.
 
@@ -26,7 +26,6 @@ I was assigned to setup replication between our banking and insurance database. 
   Authenticate with our IIDR Administrator ‘iidradm‘ and password ‘inf0server’ and click: “Login”. Leave the values for server name (empty) and port number (10101) unchanged.
  ![image](https://github.com/user-attachments/assets/f12816d4-3424-4e26-8248-8565eee13c49)
 
-
 3. If not already selected click the “Configuration” button on the top.
  ![image](https://github.com/user-attachments/assets/d0632b36-c5e5-497c-a07c-7244fdc53188)
 
@@ -45,21 +44,30 @@ I was assigned to setup replication between our banking and insurance database. 
    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/6adbb9ba-d14c-4ea2-9c11-bed2f33a8dd2" />
 
 
-  Subscription monitoring shows the state and status of the defined subscription. I can see that both subscriptions are in “Inactive” state at this point. Let us take a look at our source and target database tables before we start the replication process.
+   Subscription monitoring shows the state and status of the defined subscription. I can see that both subscriptions are in “Inactive” state at this point. Let us take a look at our source and target database tables before we start the replication process.
 
-10. Double click on the “InfoSphere Data Architect” icon. This will open the “InfoSphere Data Architect” client that we will use for connecting to our database “JKLW_DBS”.
+8. Double click on the “InfoSphere Data Architect” icon. This will open the “InfoSphere Data Architect” client that we will use for connecting to our database “JKLW_DBS”.
+   <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/bfc01fc2-c52f-49f4-961b-184a30e92aac" />
 
-11. In the “Data Project Explorer”, navigate to the “IIDR_LAB > SQL Scripts”,
 
-12. Right-click on the “01_IDR2DB_SOURCE.sql” script and select “Run SQL” from the context menu.
+9. In the “Data Project Explorer”, navigate to the “IIDR_LAB > SQL Scripts”
+    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/1744215f-5dba-4b50-ae9a-b911613d58af" />
 
-13. In the “Select Connection Profile” dialog box, select the “JKLW_DBS” connection then click the “Finish” button.
+10. Right-click on the “01_IDR2DB_SOURCE.sql” script and select “Run SQL” from the context menu.
+    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/b3ba69dd-68ec-4c6d-94e9-29e8f9ba80e2" />
 
-14. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
+11. In the “Select Connection Profile” dialog box, select the “JKLW_DBS” connection then click the “Finish” button.
+    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/f50eff1e-275b-447d-b906-d8aa4de58aa6" />
+
+12. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
+    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/8ca5d876-c1d6-4698-826b-d6c51c4114c9" />
+
 
 15. Click on each query and select the results tab to see output from the SQL statement.
   - “JK_BANK1.BANK_ACCOUNTS” which contains our banking customer master data. The “BANK_BALANCE” column is updated once a month during month end processing with the actual balance of the customer
   - “JK_BANK2.BANK_SAVINGS” contains customer address information. One record out of many is displayed here. We’ll change this record later on to see how InfoSphere IIDR replicates changes.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/45323f35-69ad-41f1-90d6-894452055708" />
+
 
 14. Right-click on the “02_IDR2DB_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection.
 
