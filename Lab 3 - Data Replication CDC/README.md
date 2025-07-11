@@ -154,30 +154,64 @@ I was assigned to setup replication between our banking and insurance database. 
       - Whenever an existing record is processed the existing record in the target table gets updated. The VALID_TO column reflects then the current timestamp and invalidates the records. In addition a new record will be created containing the updated values forming the new record which is currently valid.
 
 31. While still in InfoSphere DataStage designer start the Run Directory utility
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/24e368e8-8cae-4982-9f65-808549f82f55" />
 
-32. In Run Director you can later see that the InfoSphere DataStage job is started.
 
-33. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “04_IDR2DC_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
+33. In Run Director you can later see that the InfoSphere DataStage job is started.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/512439aa-1c14-46e2-b854-fbe6c62ebd13" />
+
+    Double click the job IDR2DC then click run
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/1fb72516-1f85-490a-9fdd-dbd6ad9ecd48" />
+
+    
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/8b85018a-9340-4ef0-aee3-5feb6d5f7b91" />
+
+34. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “04_IDR2DC_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
   - Remember that our current source table “JK_LIFE.ACCOUNTS_BY_STATE” is also being mirrored from the table “JK_BANK1.BANK_ACCOUNTS” using the subscription IIDR2DB from the beginning of this lab.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/9beab0b5-d0dd-4ac6-b4c3-90ecbee6ec56" />
 
-34. Right-click on the “05_IDR2DC_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
 
-35. In the “SQL Results" pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two target tables.
+35. Right-click on the “05_IDR2DC_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
 
-36. Click on each query and select the results tab to see output from the SQL statement. Both statements should return no rows back as both are target tables should be empty.
+36. In the “SQL Results" pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two target tables.
+
+37. Click on each query and select the results tab to see output from the SQL statement. Both statements should return no rows back as both are target tables should be empty.
   - “JK_LIFE.ACCOUNTS_BY_STATE” contains bank balance information aggregated by state and gender from earlier in the lab. Scroll down and make note of the “BANK_BALANCE” fields for account holders in the state of “VA”.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/d2efba6f-d84b-4850-b158-93caf3b3852f" />
+
   - “JK_LIFE.ACCOUNTS_SCD” has now been populated with data reflecting the source table “JK_LIFE.ACCOUNTS_BY_STATE”. Please also note that the “VALID_FROM” column reflects the current timestamp and the “VALID_TO” column is empty for all rows.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/3e213479-d618-4a24-98a6-84b82aab2541" />
 
-37. Right-click on the “06_IDR2DC_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection. This query will take at least 90 seconds to complete.
 
-38. In the “SQL Results” pane, expand the operation to see the SQL statements that were executed.
+38. Right-click on the “06_IDR2DC_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection. This query will take at least 90 seconds to complete.
 
-39. Click on each query and select the results tab to see output from the SQL statement.
+39. In the “SQL Results” pane, expand the operation to see the SQL statements that were executed.
+
+40. Click on each query and select the results tab to see output from the SQL statement.
   - The first query is for the “JK_LIFE.ACCOUNTS_BY_STATE”. Scroll down to the records that show account holders in the state of “VA” and make note of the change in the value of the “BANK_BALANCE” fields.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/f96030ea-3d7f-42f8-b11a-46243044fe86" />
+
   - The second query is for the “JK_LIFE.ACCOUNTS_SCD” table. Scroll down and make note of the “BANK_BALANCE” fields for the state of “VA”.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/6b98c804-d24e-4279-91fc-ae206ff36b35" />
+
+  - The third and fourth queries update the “BANK_BALANCE” field for the two records shown above. Ignore the fifth query and the associated warning. This query simply delays the execution of the last two SQL statements by ninety seconds.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/35a02a60-1fa6-42ad-b8f6-c0b09e254002" />
+
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/5cc69506-edd8-41ec-ab9d-f08bbfb2152c" />
+
+  - The sixth query is for the “JK_LIFE.ACCOUNTS_BY_STATE”. Scroll down to the records that show account holders in the state of “VA” and make note of the change in the value of the “BANK_BALANCE” fields.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/bfdd7f8f-9ad5-4766-83de-b0682fb719c8" />
+
+  - The last query is a for the “JK_LIFE.ACCOUNTS_SCD” table you will notice that the two updated records from the source table have lead to properly time-delimited data in the target.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/ca907208-d342-46b8-9f7d-b21049f7bd91" />
+
   
 40. This concludes the first part of this lab. Close the “IIDR Management Console”, the “DataStage Run Director”, the “DataStage Designer Client”, and “InfoSphere Data Architect” client.
 
-41. Open the “Start Menu” then click on the “IIDR Stop” icon.
-
 ---
+### Summary
+IBM InfoSphere Data Replication is a very powerful log based replication product which has little impact on a source database. In addition to replication, InfoSphere Data Replication can be used for database auditing and real time data transformation. It supports all the major relational database systems such as IBM DB2, Oracle, Sybase, IBM Informix®, IBM solidDB™, SQL Server for dual replication (source and target. Captured data can be provided as JMS messages or could be passed to third party software by using the ‘User Exit’ feature of the product.
+
+IBM InfoSphere DataStage is a powerful, scalable ETL solution allowing comprehensive data transformations. IBM InfoSphere DataStage Designer enables you to build these comprehensive data transformations graphically, therefore letting the user focus on the data flow instead of worrying how to implement a certain function.
+
+By using IBM InfoSphere Data Replication with IBM InfoSphere DataStage in your data integration architecture, you can effectively eliminate the need for resource intensive data extraction processes; you are not affecting the availability of your source systems; you are capturing changes in real-time; and you can harness the power of a comprehensive ETL solution.
