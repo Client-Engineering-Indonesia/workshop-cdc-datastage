@@ -33,7 +33,8 @@ I was assigned to setup replication between our banking and insurance database. 
 4. I can see three subscriptions; “IDR2DB”, “IDR2DC”, and “IDR2FILE” which are defined under project “Default Project”. Let’s first take a look at subscription “IDR2DB” which is used for the address and bank balance synchronization part. Click on “IDR2DB” in the left hand side of the window.
 
 5. Please look at the source and target table relationship within the subscription and have a look at the different mapping types of the two source/target table combinations.
-  Standard replication stands for straight 1:1 replication between the two tables. Summarization means that the contents of the source table will be aggregated by an individual key in the target table.
+   <img width="909" height="579" alt="image" src="https://github.com/user-attachments/assets/f65ce3b3-49e8-490c-ad52-f44b52828d60" />
+   Standard replication stands for straight 1:1 replication between the two tables. Summarization means that the contents of the source table will be aggregated by an individual key in the target table.
 
 6. Let’s have a closer look at the mapping details of one of the table mappings. Double Click on the “JK_BANK1.BANK_ACCOUNTS” table. The mapping details will be opened in the lower part of the window. Here you can see how the columns of the source table are mapped to target table columns.
 
