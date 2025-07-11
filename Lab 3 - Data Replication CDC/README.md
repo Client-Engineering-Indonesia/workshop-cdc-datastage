@@ -112,26 +112,43 @@ I was assigned to setup replication between our banking and insurance database. 
     <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/3f5be2f7-8683-40df-97f0-8a7257d5b51c" />
 
   - The last query is a re-run of the second query for the “JK_LIFE.BANK_SAVINGS” table. Make note of the change in the value of the fourth field
-    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/9199fba3-5a5b-4e93-9313-44a4a308ad0e" />
-
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/9c4a612c-22ce-4abc-858f-346f729f439b" />
 
 23. Switch back to the “IIDR Management Console” and look at our second subscription “IDR2DC”. Switch back to the “Configuration” perspective then click on the subscription “IDR2DC” in the left hand side of the window.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/742f6ec8-8411-4ceb-90b3-fa0b5dee289f" />
+
 
   Please notice that the source table is our aggregate “JK_LIFE.ACCOUNTS_BY_STATE” table and the target is not a specific table but InfoSphere DataStage Direct Connect in this case. This means that InfoSphere IIDR directly interacts with an InfoSphere DataStage job by feeding the job with only changed data.
 
-25. Let’s look at the DataStage Properties for this subscription. Right-click on the “IDR2DC” subscription in the left hand side of the window and choose “InfoSphere DataStage Properties”
+24. Let’s look at the DataStage Properties for this subscription. Right-click on the “IDR2DC” subscription in the left hand side of the window and choose “InfoSphere DataStage Properties”
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/63cbc052-6eb7-4b6a-b052-39b6de2d960d" />
 
-26. In the InfoSphere DataStage Properties window is defined how InfoSphere IIDR interacts with the InfoSphere DataStage job. Notice that the subscription is set to automatically start the DataStage job.
 
-27. On the “Monitoring” tab, right-click the subscription “IDR2DC” and choose “Start Mirroring”.
+25. In the InfoSphere DataStage Properties window is defined how InfoSphere IIDR interacts with the InfoSphere DataStage job. Notice that the subscription is set to automatically start the DataStage job.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/a9411418-fc39-4793-bd53-0f93f4d53a50" />
 
-28. On the “Start Mirroring” dialog box, click the “OK” button.
 
-29. Let’s start the InfoSphere DataStage designer to have a look at the related DataStage job. Logon as user “tracy”, password ‘inf0server’. Ensure that the project is set to ‘dstage1’ before clicking ‘OK’.
+26. On the “Monitoring” tab, right-click the subscription “IDR2DC” and choose “Start Mirroring”.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/17f30441-1867-4044-87b5-639f9669f1cd" />
 
-30. From the repository browser open the job “IDR2DC” in the “JKLW > 08_DATA_REPLICATION” folder. Right-click on the “IDR2DC” job and select “Edit”.
+
+27. On the “Start Mirroring” dialog box, click the “OK” button.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/9418203b-4dd7-4a24-8e39-e9af67bd6fd3" />
+
+
+28. Let’s start the InfoSphere DataStage designer to have a look at the related DataStage job. Logon as user “tracy”, password ‘inf0server’. Ensure that the project is set to ‘dstage1’ before clicking ‘OK’.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/81d9353c-27a8-424b-9a03-413e3a7bca02" />
+
+
+29. From the repository browser open the job “IDR2DC” in the “JKLW > 08_DATA_REPLICATION” folder. Right-click on the “IDR2DC” job and select “Edit”.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/3a3f2c24-a098-442c-9e7b-f2472c91bbff" />
+
   - Let’s have a look at the job design of the “IDR2DC” job.
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/722974b8-8a73-4231-b7f6-5086d2a60951" />
+
+ The high level job flow is as follows:
   - Whenever changes occur on the source table InfoSphere IIDR immediately pushes the delta information through the IIDR Transaction Stage to the DataStage job.
+
   - Data is then processed through a so called Slowly Changing Dimension stage which writes the data to a DB2 table.
       - Whenever a new record is processed, the row is created in the target table and the VALID_FROM column of the table is populated with the current timestamp. The VALID_TO column is empty at that time, which means the record is currently valid.
       - Whenever an existing record is processed the existing record in the target table gets updated. The VALID_TO column reflects then the current timestamp and invalidates the records. In addition a new record will be created containing the updated values forming the new record which is currently valid.
