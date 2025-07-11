@@ -34,24 +34,25 @@ I was assigned to setup replication between our banking and insurance database. 
 
 5. Please look at the source and target table relationship within the subscription and have a look at the different mapping types of the two source/target table combinations.
    <img width="909" height="579" alt="image" src="https://github.com/user-attachments/assets/f65ce3b3-49e8-490c-ad52-f44b52828d60" />
+
    Standard replication stands for straight 1:1 replication between the two tables. Summarization means that the contents of the source table will be aggregated by an individual key in the target table.
 
-6. Let’s have a closer look at the mapping details of one of the table mappings. Double Click on the “JK_BANK1.BANK_ACCOUNTS” table. The mapping details will be opened in the lower part of the window. Here you can see how the columns of the source table are mapped to target table columns.
+7. Let’s have a closer look at the mapping details of one of the table mappings. Double Click on the “JK_BANK1.BANK_ACCOUNTS” table. The mapping details will be opened in the lower part of the window. Here you can see how the columns of the source table are mapped to target table columns.
 
-7. Click on the “Monitoring” button.
+8. Click on the “Monitoring” button.
   Subscription monitoring shows the state and status of the defined subscription. I can see that both subscriptions are in “Inactive” state at this point. Let us take a look at our source and target database tables before we start the replication process.
 
-8. Double click on the “InfoSphere Data Architect” icon. This will open the “InfoSphere Data Architect” client that we will use for connecting to our database “JKLW_DBS”.
+9. Double click on the “InfoSphere Data Architect” icon. This will open the “InfoSphere Data Architect” client that we will use for connecting to our database “JKLW_DBS”.
 
-9. In the “Data Project Explorer”, navigate to the “IIDR_LAB > SQL Scripts”,
+10. In the “Data Project Explorer”, navigate to the “IIDR_LAB > SQL Scripts”,
 
-10. Right-click on the “01_IDR2DB_SOURCE.sql” script and select “Run SQL” from the context menu.
+11. Right-click on the “01_IDR2DB_SOURCE.sql” script and select “Run SQL” from the context menu.
 
-11. In the “Select Connection Profile” dialog box, select the “JKLW_DBS” connection then click the “Finish” button.
+12. In the “Select Connection Profile” dialog box, select the “JKLW_DBS” connection then click the “Finish” button.
 
-12. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
+13. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
 
-13. Click on each query and select the results tab to see output from the SQL statement.
+14. Click on each query and select the results tab to see output from the SQL statement.
   - “JK_BANK1.BANK_ACCOUNTS” which contains our banking customer master data. The “BANK_BALANCE” column is updated once a month during month end processing with the actual balance of the customer
   - “JK_BANK2.BANK_SAVINGS” contains customer address information. One record out of many is displayed here. We’ll change this record later on to see how InfoSphere IIDR replicates changes.
 
