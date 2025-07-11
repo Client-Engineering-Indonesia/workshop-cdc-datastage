@@ -107,8 +107,6 @@ I was assigned to setup replication between our banking and insurance database. 
 
 
     <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/38877f58-2ee1-4454-b994-f7a771cc3bb2" />
-    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/c3881405-5ed4-4e04-a976-b1b2b3736e7a" />
-
 
   - The sixth query is a re-run of the first query for the “JK_LIFE.ACCOUNTS_BY_STATE”. Scroll down to the record that shows “male” account holders in the state of “VA” and make note of the change in the value of the “BANK_BALANCE” field.
     <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/3f5be2f7-8683-40df-97f0-8a7257d5b51c" />
