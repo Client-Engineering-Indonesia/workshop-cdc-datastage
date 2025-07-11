@@ -1,4 +1,4 @@
-<img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/db3c24b6-dc31-4553-b62a-50003a76294d" />### IBM InfoSphere Data Replication
+### IBM InfoSphere Data Replication
 
 In this lab, you will be using IBM InfoSphere Data Replication to replicate data between the JK Life & Wealth’s banking and insurance databases. Also, we will be using InfoSphere Data Replication in connection with InfoSphere DataStage to keep a history of our bank balances to see how our business develops in different areas of the country.
 
@@ -106,7 +106,7 @@ I was assigned to setup replication between our banking and insurance database. 
     <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/f12d6c25-cb19-4de8-a3c1-6a488711006a" />
 
 
-    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/38877f58-2ee1-4454-b994-f7a771cc3bb2" /
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/38877f58-2ee1-4454-b994-f7a771cc3bb2" />
     <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/c3881405-5ed4-4e04-a976-b1b2b3736e7a" />
 
 
