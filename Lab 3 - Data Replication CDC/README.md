@@ -1,4 +1,4 @@
-<img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/54e51784-4c68-4862-9101-7761dad4975a" />### IBM InfoSphere Data Replication
+<img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/db3c24b6-dc31-4553-b62a-50003a76294d" />### IBM InfoSphere Data Replication
 
 In this lab, you will be using IBM InfoSphere Data Replication to replicate data between the JK Life & Wealth’s banking and insurance databases. Also, we will be using InfoSphere Data Replication in connection with InfoSphere DataStage to keep a history of our bank balances to see how our business develops in different areas of the country.
 
@@ -53,50 +53,71 @@ I was assigned to setup replication between our banking and insurance database. 
 9. In the “Data Project Explorer”, navigate to the “IIDR_LAB > SQL Scripts”
     <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/1744215f-5dba-4b50-ae9a-b911613d58af" />
 
-10. Right-click on the “01_IDR2DB_SOURCE.sql” script and select “Run SQL” from the context menu.
-    <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/b3ba69dd-68ec-4c6d-94e9-29e8f9ba80e2" />
-
-11. In the “Select Connection Profile” dialog box, select the “JKLW_DBS” connection then click the “Finish” button.
+10. Click “01_IDR2DB_SOURCE.sql” to see the script. Connect to **db2inst1** with the password: **inf0server** then run the script
     <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/f50eff1e-275b-447d-b906-d8aa4de58aa6" />
 
-12. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
+11. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two source tables.
     <img width="1051" height="579" alt="image" src="https://github.com/user-attachments/assets/8ca5d876-c1d6-4698-826b-d6c51c4114c9" />
 
-
-15. Click on each query and select the results tab to see output from the SQL statement.
+12. Click on each query and select the results tab to see output from the SQL statement.
   - “JK_BANK1.BANK_ACCOUNTS” which contains our banking customer master data. The “BANK_BALANCE” column is updated once a month during month end processing with the actual balance of the customer
+    <img width="1051" height="390" alt="image" src="https://github.com/user-attachments/assets/c95f1bb0-2d80-4f47-ac52-eabc9dd4f112" />
+
   - “JK_BANK2.BANK_SAVINGS” contains customer address information. One record out of many is displayed here. We’ll change this record later on to see how InfoSphere IIDR replicates changes.
-    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/45323f35-69ad-41f1-90d6-894452055708" />
+    <img width="1051" height="390" alt="image" src="https://github.com/user-attachments/assets/f4a4f94c-e52d-45ad-8855-87842f64ed0c" />
 
+13. Right-click on the “02_IDR2DB_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
 
-14. Right-click on the “02_IDR2DB_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection.
+14. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two target tables.
 
-15. In the “SQL Results” pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two target tables.
-
-16. Click on each query and select the results tab to see output from the SQL statement. Both statements should return no rows back as both are target tables should be empty.
+15. Click on each query and select the results tab to see output from the SQL statement. Both statements should return no rows back as both are target tables should be empty.
   - “JK_LIFE.ACCOUNTS_BY_STATE” which will later on contain bank balance information aggregated by state and gender.
+    <img width="1051" height="390" alt="image" src="https://github.com/user-attachments/assets/f49c1c52-6ef0-4a31-a09d-956e1f7b55d3" />
+
   - “JK_LIFE.BANK_SAVINGS” which will contain a copy of the address information from our source table “JK_BANK2.BANK_SAVINGS”.
+    <img width="1051" height="390" alt="image" src="https://github.com/user-attachments/assets/73768c0c-cb03-4752-9f57-15df3324bda4" />
 
-17. Switch back to the InfoSphere “IIDR Management Console”.
+16. Switch back to the InfoSphere “IIDR Management Console”.
 
-18. On the “Monitoring” tab, right-click the subscription “IDR2DB” and choose “Start Mirroring”. This will start “continuous mirroring” for subscription “IDR2DB” to populate the target tables in the “JK_LIFE” database with data from the source tables according to the replication rules defined in the subscription.
+17. On the “Monitoring” tab, right-click the subscription “IDR2DB” and choose “Start Mirroring”. This will start “continuous mirroring” for subscription “IDR2DB” to populate the target tables in the “JK_LIFE” database with data from the source tables according to the replication rules defined in the subscription.
+    <img width="1051" height="582" alt="image" src="https://github.com/user-attachments/assets/55f63e7b-d560-4453-8f96-044755bc0047" />
 
-19. Choose “Continuous” as the mirroring method. Please see the message at the bottom of the window that one or more tables will be refreshed when Mirroring is started. Note that since the initial status of the table mappings were set to “Refresh”, when the subscription starts, the data is first pulled from the source and loaded to the target table. Click the “OK” button.
 
-20. Mirroring will be started. Notice that the state of the subscription changes from “Starting” to “Refresh Before Mirror” to “Mirror Continuous”
+18. Choose “Continuous” as the mirroring method. Please see the message at the bottom of the window that one or more tables will be refreshed when Mirroring is started. Note that since the initial status of the table mappings were set to “Refresh”, when the subscription starts, the data is first pulled from the source and loaded to the target table. Click the “OK” button.
 
-21. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “03_IDR2DB_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection.
+19. Mirroring will be started. Notice that the state of the subscription changes from “Starting” to “Refresh Before Mirror” to “Mirror Continuous”
+    <img width="1053" height="582" alt="image" src="https://github.com/user-attachments/assets/0fee1fb3-3366-48d8-9383-7a38cedbad03" />
 
-22. In the “SQL Results” pane, expand the operation to see the SQL statements that were executed.
 
-23. Click on each query and select the results tab to see output from the SQL statement.
+20. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “03_IDR2DB_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
+
+21. In the “SQL Results” pane, expand the operation to see the SQL statements that were executed.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/010b94f6-1cb2-4fa1-b674-b155eb028f3b" />
+
+
+22. Click on each query and select the results tab to see output from the SQL statement.
   - The first query for the “JK_LIFE.ACCOUNTS_BY_STATE” table has been populated with aggregated data by state, gender from the source table “JK_BANK1.BANK_ACCOUNTS”. Scroll down to the record that shows “male” account holders in the state of “VA” and make note of the value in the “BANK_BALANCE” field.
-  - The second query for the “JK_LIFE.BANK_SAVINGS” table has received a 1:1 copy of the address information from source table “JK_BANK2.BANK_SAVINGS”. Make note of the value in the fourth field.
-  - The third and fourth queries are performing the changes on our source tables. Ignore the fifth query and the associated warning. This query simply delays the execution of the last two SQL statements by four seconds.
-  - The sixth query is a re-run of the first query for the “JK_LIFE.ACCOUNTS_BY_STATE”. Scroll down to the record that shows “male” account holders in the state of “VA” and make note of the change in the value of the “BANK_BALANCE” field.
-  - The last query is a re-run of the second query for the “JK_LIFE.BANK_SAVINGS” table. Make note of the change in the value of the fourth field
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/dafdfc63-d938-48ae-afb4-5c5b403d3e2a" />
 
-24. Switch back to the “IIDR Management Console” and look at our second subscription “IDR2DC”. Switch back to the “Configuration” perspective then click on the subscription “IDR2DC” in the left hand side of the window.
+  - The second query for the “JK_LIFE.BANK_SAVINGS” table has received a 1:1 copy of the address information from source table “JK_BANK2.BANK_SAVINGS”. Make note of the value in the fourth field.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/3aebb6da-f5e4-4fa4-ade1-6f4e6daada37" />
+
+  - The third and fourth queries are performing the changes on our source tables. Ignore the fifth query and the associated warning. This query simply delays the execution of the last two SQL statements by four seconds.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/f12d6c25-cb19-4de8-a3c1-6a488711006a" />
+
+
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/38877f58-2ee1-4454-b994-f7a771cc3bb2" /
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/c3881405-5ed4-4e04-a976-b1b2b3736e7a" />
+
+
+  - The sixth query is a re-run of the first query for the “JK_LIFE.ACCOUNTS_BY_STATE”. Scroll down to the record that shows “male” account holders in the state of “VA” and make note of the change in the value of the “BANK_BALANCE” field.
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/3f5be2f7-8683-40df-97f0-8a7257d5b51c" />
+
+  - The last query is a re-run of the second query for the “JK_LIFE.BANK_SAVINGS” table. Make note of the change in the value of the fourth field
+    <img width="710" height="390" alt="image" src="https://github.com/user-attachments/assets/9199fba3-5a5b-4e93-9313-44a4a308ad0e" />
+
+
+23. Switch back to the “IIDR Management Console” and look at our second subscription “IDR2DC”. Switch back to the “Configuration” perspective then click on the subscription “IDR2DC” in the left hand side of the window.
 
   Please notice that the source table is our aggregate “JK_LIFE.ACCOUNTS_BY_STATE” table and the target is not a specific table but InfoSphere DataStage Direct Connect in this case. This means that InfoSphere IIDR directly interacts with an InfoSphere DataStage job by feeding the job with only changed data.
 
@@ -121,10 +142,10 @@ I was assigned to setup replication between our banking and insurance database. 
 
 32. In Run Director you can later see that the InfoSphere DataStage job is started.
 
-33. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “04_IDR2DC_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection.
+33. Now switch back to the “InfoSphere Data Architect” window. Right-click on the “04_IDR2DC_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
   - Remember that our current source table “JK_LIFE.ACCOUNTS_BY_STATE” is also being mirrored from the table “JK_BANK1.BANK_ACCOUNTS” using the subscription IIDR2DB from the beginning of this lab.
 
-34. Right-click on the “05_IDR2DC_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection.
+34. Right-click on the “05_IDR2DC_TARGET.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection.
 
 35. In the “SQL Results" pane, expand the operation to see the two SQL statements that were executed. The results show excerpts from our two target tables.
 
@@ -132,7 +153,7 @@ I was assigned to setup replication between our banking and insurance database. 
   - “JK_LIFE.ACCOUNTS_BY_STATE” contains bank balance information aggregated by state and gender from earlier in the lab. Scroll down and make note of the “BANK_BALANCE” fields for account holders in the state of “VA”.
   - “JK_LIFE.ACCOUNTS_SCD” has now been populated with data reflecting the source table “JK_LIFE.ACCOUNTS_BY_STATE”. Please also note that the “VALID_FROM” column reflects the current timestamp and the “VALID_TO” column is empty for all rows.
 
-37. Right-click on the “06_IDR2DC_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #12 to select the database connection. This query will take at least 90 seconds to complete.
+37. Right-click on the “06_IDR2DC_UPDATE_SOURCE.sql” script and select “Run SQL” from the context menu. Repeat step #10 to select the database connection. This query will take at least 90 seconds to complete.
 
 38. In the “SQL Results” pane, expand the operation to see the SQL statements that were executed.
 
