@@ -22,9 +22,13 @@ To begin, download the **DataStage Lab Project ZIP file** from Box in the link p
 
 * https://ibm.ent.box.com/s/th0lz0x2eqa34duiqa9zc66g83mek988
 
-To get started, head to the shared SW cluster homepage. Navigate to **projects -> all projects**. Create a new project from file.
+To get started, head to the shared SW cluster homepage. Navigate to **projects -> all projects**. 
 
 ![0.All Project](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png)
+
+Create a **new project** from file.
+
+![0.new Project]([https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%20too.png))
 
 ## 💡 Explainer - DataStage Projects
 
@@ -34,11 +38,11 @@ To get started, head to the shared SW cluster homepage. Navigate to **projects -
 
 2. select **Local file** and upload the downloaded ZIP file in the folder of this repository.
 
-![1.Upload ZIP file]()
+![1.Upload ZIP file](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/1.Upload%20ZIP%20file.png)
 
 3. After the DataStage Core Lab Project ZIP file is uploaded, provide a unique name for your project (e.g., `DataStage Core Lab_YourInitials`).
 
-![2.Naming the project with initials.]()
+![2.Naming the project with initials.](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/2.Naming%20the%20project%20with%20initials.png)
 
 4. Click the **Create** button to create the project.
 
@@ -51,7 +55,7 @@ To get started, head to the shared SW cluster homepage. Navigate to **projects -
 
 1. Click into the **NEW Flow** to get started building your DataStage job!
 
-![3.Click new flow button]()
+![3.Click new flow button](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/3.Click%20flow%20with%20NEW%20flow%20name.png)
 
 >**Rename these DataStage flows to include your initials.** This will help in identifying your assets.
 
@@ -85,27 +89,27 @@ The outputs that result to a CSV file in the project. Follow these steps to run 
     *   If you don't have the project open, follow these steps:
         a. From the Navigation menu, choose **Projects > View all projects**.
 
-        ![0.All Project]()
+        ![0.All Project](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png)
     
         b. Open your data integration project.
         
 2.  Click the **Assets** tab to see all the assets in the project.
 
-    ![4.Assets page]()
+    ![4.Assets page](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/4.Assets%20page.png)
 
 3.  Click **Flows > DataStage flows**.
 
-    ![5.Data Stage FLows]()
+4.  Click the **Core Demo NEW Flow_your initials** flow in the list to open it.
 
-4.  Click the **Core Demo NEW Flow_your initials** flow in the list to open it. 
+ ![5.Data Stage FLows](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/5.Data%20Stage%20FLows.png)
 
     * This flow joins the `Mortgage Applicants` and `Mortgage Applications` tables that are stored in Db2 Warehouse, filters the data to those records from the State of California, and creates a sequential file in CSV format as the output.
 
     
 
-5.  Click the **zoom in** and **zoom out** icons on the toolbar to set your preferred view of the canvas.
+6.  Click the **zoom in** and **zoom out** icons on the toolbar to set your preferred view of the canvas.
 
-![6.Zoom in and Zoom out Button]()
+![6.Zoom in and Zoom out Button](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/6.Zoom%20in%20and%20Zoom%20out%20Button.png)
 
 6.  Double-click the `MORTGAGE_APPLICATIONS_1` node to view the settings.
 
@@ -119,7 +123,7 @@ The outputs that result to a CSV file in the project. Follow these steps to run 
 
     a. Expand the **Properties** section.
 
-    ![7.Mortgage applicants properties expand]()
+    ![7.Mortgage applicants properties expand](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/7.Mortgage%20applicants%20properties%20expand.png)
 
     b. Scroll down, and click **Preview data**. This data set includes information about mortgage applicants who applied for a loan.
 
@@ -127,11 +131,11 @@ The outputs that result to a CSV file in the project. Follow these steps to run 
 
     * Click the **Chart** panel.
 
-     ![8.Chart Panel]()
+     ![8.Chart Panel](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/8.Chart%20Panel.png)
 
     * In the **Columns to visualize** list, select **STATE**.
 
-    ![9.Column to visualize]()
+    ![9.Column to visualize](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/9.Column%20to%20visualize.png)
 
     * Click **Visualize data** to see a pie chart showing the distribution of the data by state.
 
@@ -150,18 +154,19 @@ The outputs that result to a CSV file in the project. Follow these steps to run 
 
 9.  Click the **Logs** icon on the toolbar so you can watch the flow's progress.
 
-![10.Logs Button]()
+![10.Logs Button](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/10.Logs%20Button.png)
 
 10. Click **Compile**, and then click **Run**. The run can take about one minute to complete.
 
-![11.Compile Button]()
+![11.Compile Button](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/11.Compile%20Button.png)
 
 
 11. View the logs. You can use the total rows and rows/sec for each step in the flow to visually verify that the filter is working as expected.
 
 12. When the run completes successfully, click **DataStage Core Lab_<Your Initials>** in the navigation trail to return to the project.
 
-![11.SS the number 12]()
+![11.SS the number 12](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/11.SS%20the%20number%2012.png)
+
 
 13. On the **Assets** tab, click **Data > Data assets**.
 
@@ -172,8 +177,8 @@ ___
 ### ✅ Check your progress
 
 The following image shows the resulting CSV file. The next task is to edit the DataStage flow.
-
-![11.SS Result of the processed csv]()
+![11.SS Result of the processed csv 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/11.SS%20Result%20of%20the%20processed%20csv.png)
+![11.SS Result of the processed csv 2](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/11.SS%20Result%20of%20the%20processed%20csv2.png)
 
 ---
 
@@ -208,11 +213,11 @@ The `Join_on_ID` node joins the data sets using the `ID` column. The next phase 
 
 1.  Return to your project by clicking the project name in the navigation trail.'
 
-![12. where to press the navigation Trail]()
+![12. where to press the navigation Trail](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/12.%20where%20to%20press%20the%20navigation%20Trail.png)
 
 2.  On the **Assets** tab, click **Flows > DataStage flows**.
 
-![13. where to find the assests]()
+![13. where to find the assests](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/13.%20where%20to%20find%20the%20assests.png)
 
 3.  Open the **Core Demo NEW Flow_your initials** flow.
 
@@ -224,7 +229,7 @@ The `Join_on_ID` node joins the data sets using the `ID` column. The next phase 
 
 7.  For the `EMAIL_ADDRESS` column name, check the **Key** box.
 
-![14. Click Email address]()
+![14. Click Email address](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/14.%20Click%20Email%20address.png)
 
 8.  Click **Apply and return**.
 
@@ -236,7 +241,7 @@ The `Join_on_ID` node joins the data sets using the `ID` column. The next phase 
 
 The following image shows the DataStage flow is ready for the next step. Now you can add the PostgreSQL data containing the applicants' credit scores.
 
-![15. Layout SS Like original document]()
+![15. Layout SS Like original document](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20Layout%20SS%20Like%20original%20document.png)
 
 
 > #### 💡 Explainer - Asset Browser for DataStage
@@ -280,9 +285,10 @@ The following image shows the DataStage flow with the credit score asset added. 
 5.  Double-click the new **Join\_1** node to edit the settings.
     a. Expand the **Properties** section.
     b. Click **Add key**.
+    ![15. same phot as in the original document in task 4 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204%202.png)
     c. Click **Add key** again and select `EMAIL_ADDRESS` from the list.
     d. Click **Apply**.
-    ![15. same phot as in the original document in task 4]()
+    ![15. same phot as in the original document in task 4 2](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204.png)
     e. Change the `Join_1` node name to `Join_on_email`.
     f. Click **Save**.
 
