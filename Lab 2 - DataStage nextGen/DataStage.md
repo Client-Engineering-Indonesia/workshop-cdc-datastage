@@ -24,7 +24,7 @@ To begin, download the **DataStage Lab Project ZIP file** from Box in the link p
 
 To get started, head to the shared SW cluster homepage. Navigate to **projects -> all projects**. Create a new project from file.
 
-![0.All Project](Assets/0.All Project.png)
+![0.All Project](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png)
 
 ## 💡 Explainer - DataStage Projects
 
