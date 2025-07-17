@@ -83,10 +83,9 @@ The outputs that result to a CSV file in the project. Follow these steps to run 
 1.  Click your **DataStage Core Lab_Your Initials** project.
     
     *   If you don't have the project open, follow these steps:
+      
         a. From the Navigation menu, choose **Projects > View all projects**.
 
-        ![0.All Project](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png)
-    
         b. Open your data integration project.
         
 2.  Click the **Assets** tab to see all the assets in the project.
