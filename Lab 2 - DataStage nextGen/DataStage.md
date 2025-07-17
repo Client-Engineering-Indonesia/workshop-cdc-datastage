@@ -279,18 +279,31 @@ The following image shows the DataStage flow with the credit score asset added. 
 2.  Drag the **Join** stage onto the canvas, and drop the node on the link line between the `Filter_State_Code` and `Sequential_file_1` nodes.
 3.  Hover over the `CREDIT_SCORE_1` connector to see the arrow. Connect the arrow to the new **Join** stage.
 4.  Double-click the `CREDIT_SCORE_1` node to edit the settings.
+   
     a. Click the **Output** tab and expand the **Columns** section.
+    
     b. Click **Edit**.
+    
     c. For the `EMAIL_ADDRESS` and `CREDIT_SCORE` column names, select **Key**.
+    
     d. Click **Apply and return**.
+    
     e. Click **Save**.
-5.  Double-click the new **Join\_1** node to edit the settings.
+    
+6.  Double-click the new **Join\_1** node to edit the settings.
+   
     a. Expand the **Properties** section.
+    
     b. Click **Add key**.
+    
     c. Click **Add key** again and select `EMAIL_ADDRESS` from the list.
+    
     ![15. same phot as in the original document in task 4 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204%202.png)
+    
     d. Click **Apply**.
+    
     e. Change the `Join_1` node name to `Join_on_email`.
+    
     f. Click **Save**.
 
 ### ✅ Check your progress
