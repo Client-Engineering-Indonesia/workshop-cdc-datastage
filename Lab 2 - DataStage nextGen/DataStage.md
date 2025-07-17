@@ -22,13 +22,9 @@ To begin, download the **DataStage Lab Project ZIP file** from Box in the link p
 
 * https://ibm.ent.box.com/s/th0lz0x2eqa34duiqa9zc66g83mek988
 
-To get started, head to the shared SW cluster homepage. Navigate to **projects -> all projects**. 
+To get started, head to the shared SW cluster homepage. Navigate to Create a **new project**.
 
-![0.All Project](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png)
-
-Create a **new project** from file.
-
-![0.new Project]([https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%201.png](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project%20too.png))
+![0.new Project]([https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/0.All%20Project.png))
 
 ## 💡 Explainer - DataStage Projects
 
