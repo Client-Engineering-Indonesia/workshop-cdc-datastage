@@ -287,10 +287,9 @@ The following image shows the DataStage flow with the credit score asset added. 
 5.  Double-click the new **Join\_1** node to edit the settings.
     a. Expand the **Properties** section.
     b. Click **Add key**.
-    ![15. same phot as in the original document in task 4 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204%202.png)
     c. Click **Add key** again and select `EMAIL_ADDRESS` from the list.
+    ![15. same phot as in the original document in task 4 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204%202.png)
     d. Click **Apply**.
-    ![15. same phot as in the original document in task 4 2](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204.png)
     e. Change the `Join_1` node name to `Join_on_email`.
     f. Click **Save**.
 
@@ -298,7 +297,7 @@ The following image shows the DataStage flow with the credit score asset added. 
 
 The following image shows the DataStage flow with a second Join stage added. Now you need to add a Transformer stage to calculate each applicant's total debt.
 
-![16. same photo as in real document]()
+![16. same photo as in real document](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/15.%20same%20phot%20as%20in%20the%20original%20document%20in%20task%204.png)
 
 ---
 
