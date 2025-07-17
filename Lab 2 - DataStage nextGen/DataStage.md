@@ -5,7 +5,7 @@
 Use the cluster link provided by your instructor.
 
 1.  **Access the shared cluster 1:**
-    *   URL: **cpd-cpd.apps.itz-tkms06.infra01-lb.wdc07.techzone.ibm.com**
+    *   URL: **https://cpd-cpd.apps.itz-tkms06.infra01-lb.wdc07.techzone.ibm.com**
     *   Username: Key in your student id (`student1` – `student25`)
 
     **Access the shared cluster 2:**
