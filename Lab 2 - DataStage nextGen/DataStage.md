@@ -258,12 +258,14 @@ The following image shows the DataStage flow is ready for the next step. Now you
 
 3.  Locate the asset by selecting **Connection > Trial Connection - Databases for PostgreSQL > BANKING > CREDIT_SCORE**.
     > **Note:** Click the connection or schema name itself (not the checkbox) to expand the tree.
+![15. same phot as in the original document in task 4 1](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/16.%20same%20photo%20as%20in%20real%20document.png)
 
 4.  Click the **Preview** icon (👁️) to preview the credit score data.
 
 5.  Click **Add**.
 
 ### ✅ Check your progress
+![15. same phot as in the original document in task 2](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/16.%20same%20photo%20as%20in%20real%20document%202.png)
 
 The following image shows the DataStage flow with the credit score asset added. Now you need to join the applicant, application, and credit score data.
 
@@ -317,7 +319,7 @@ The following image shows the DataStage flow with a second Join stage added. Now
     * Verify the final expression is `Link_7.LOAN_AMOUNT + Link_7.CREDITCARD_DEBT` (your link number may be different).
     * Click **Apply and return**. If you see an error, change the column **Data type** to **nvarchar**.
     * For the `CREDIT_SCORE` column name, scroll to the right and select **Key**.
-
+![17. same photo as in documents](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/17.%20same%20photo%20as%20in%20the%20document%20showing%20tge.png)
 4.  Click the **Stage** tab.
     * Select the **Advanced** page.
     * Change the **Execution mode** to **Sequential**.
@@ -331,10 +333,12 @@ The following image shows the DataStage flow with a second Join stage added. Now
 1.  In the node palette, expand the **Connectors** section.
 2.  Drag the **Asset browser** connector to the canvas beside the `CREDIT_SCORE_1` node.
 3.  Locate the asset by selecting **Connection > Trial Connection - Mongo DB > DOCUMENT > DS_INTEREST_RATES**.
-4.  Click the **Preview** icon (👁️) to preview the interest rates for each credit score range.
-5.  Click **Add**.
+![17. how to add mongoDB](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/17.%20same%20photo%20as%20in%20documents.png)
+5.  Click the **Preview** icon (👁️) to preview the interest rates for each credit score range.
+6.  Click **Add**.
 
-![17. same photo as in documents]()
+![17. same photo as in documents](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/17.%20same%20photo%20as%20in%20documents%202.png)
+
 ---
 
 # 👉 6. Add a Lookup stage to look up interest rates
@@ -358,7 +362,7 @@ The following image shows the DataStage flow with a second Join stage added. Now
 
     * For the second **Operator**, select **>=**, and for the **Range column**, select `STARTING_LIMIT`.
 
-    ![17. same photo as in the document showing tge]()
+    ![17. same photo as in the document showing tge](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/30.png)
 
 7.  Click the **Output** tab.
     a. Expand the **Columns** section and click **Edit**.
@@ -388,11 +392,12 @@ The following image shows the DataStage flow with a second Join stage added. Now
 
 The following image shows that the DataStage flow ran successfully!
 
-![18.Same photo as in the document that shows the logs of the datas.]()
+![18.Same photo as in the document that shows the logs of the datas.](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/18.Same%20photo%20as%20in%20the%20document%20that%20shows%20the%20logs%20of%20the%20datas..png)
 
 10. Hover over the sequential file node, click the ellipses (...) and select **Preview data**. The CSV file now includes all applicants and their personalized interest rates.
 
-![19. same photo as in the document that show how to preview the datas.]()
+![19. same photo as in the document that show how to preview the datas.](https://github.com/Client-Engineering-Indonesia/workshop-cdc-datastage/blob/main/Lab%202%20-%20DataStage%20nextGen/Assets/19.%20same%20photo%20as%20in%20the%20document%20that%20show%20how%20to%20preview%20the%20datas..png)
+
 ---
 
 ## 🏁 Conclusion and Next Steps
