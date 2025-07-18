@@ -5,11 +5,11 @@
 Use the cluster link provided by your instructor.
 
 1.  **Access the shared cluster 1:**
-    *   URL: **https://ibm.biz/BdeFe5**
+    *   URL: **https://ibm.biz/BdeFb7**
     *   Username: Key in your student id (`student1` – `student25`)
 
     **Access the shared cluster 2:**
-    *   URL: **https://ibm.biz/BdeFb7**
+    *   URL: **https://ibm.biz/BdeFe5**
     *   Username: Key in your student id (`student26` – `student50`)
 
 2.  Enter `Password2025!` for the password.
